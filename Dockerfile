@@ -1,4 +1,7 @@
 FROM python:3.8
 
 RUN apt-get update && apt-get -y install libosmesa6-dev patchelf libegl1-mesa-dev && apt-get clean
-
+RUN pip install --upgrade pip
+RUN pip install nox
+RUN pip install virtualenv
+RUN virtualenv venv
